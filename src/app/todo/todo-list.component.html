@@ -1,0 +1,12 @@
+<h2>TODO List</h2>
+<input [(ngModel)]="filter" placeholder="Filter todos">
+<ul>
+  <li *ngFor="let todo of filteredTodos; let i = index">
+    <span [ngStyle]="{color: todo.done ? 'gray' : 'black'}">{{ todo.text }}</span>
+    <button *ngIf="!todo.done" (click)="markDone(i)">Mark as done</button>
+    <span *ngIf="todo.done">✔️</span>
+  </li>
+</ul>
+<div *ngIf="filteredTodos.length === 0">
+  <p>No todos found (NgIf edge case)</p>
+</div>

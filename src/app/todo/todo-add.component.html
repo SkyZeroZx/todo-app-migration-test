@@ -1,0 +1,25 @@
+<h2>Add TODO</h2>
+<input [(ngModel)]="todoText" placeholder="Enter todo">
+<button (click)="addTodo()">Add</button>
+<button (click)="toggleList()">Toggle List</button>
+<button (click)="switchGender()">Switch Gender</button>
+
+<p>Today is: {{ today | date:'fullDate' }}</p>
+<p>Items: {{ itemCount }} ({{ itemCount | i18nPlural:inviteMap }})</p>
+
+<div *ngIf="showList; else noList">
+  <ul>
+    <li *ngFor="let todo of todos; let i = index">
+      {{ i + 1 }}. {{ todo }}
+    </li>
+  </ul>
+</div>
+<ng-template #noList>
+  <p>No list to show (NgIf else)</p>
+</ng-template>
+
+<div [ngSwitch]="gender">
+  <p *ngSwitchCase="'male'">NgSwitchCase: Male</p>
+  <p *ngSwitchCase="'female'">NgSwitchCase: Female</p>
+  <p *ngSwitchDefault>NgSwitchDefault: Other</p>
+</div>

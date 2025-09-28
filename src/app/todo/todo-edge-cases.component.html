@@ -1,0 +1,27 @@
+<h2>Edge Cases</h2>
+<p>Testing NgFor with edge values:</p>
+<ul>
+  <li *ngFor="let v of values; let i = index">
+    Index {{ i }}: <span *ngIf="v !== null && v !== undefined; else nullOrUndefined">{{ v }}</span>
+    <ng-template #nullOrUndefined>Null/Undefined</ng-template>
+  </li>
+</ul>
+
+<p>Testing NgSwitch with empty, null, and values:</p>
+<button (click)="setSwitch('Angular')">Angular</button>
+<button (click)="setSwitch('Migration')">Migration</button>
+<button (click)="setSwitch('')">Empty</button>
+<button (click)="setSwitch(null)">Null</button>
+<div [ngSwitch]="switchValue">
+  <span *ngSwitchCase="'Angular'">It's Angular!</span>
+  <span *ngSwitchCase="'Migration'">It's Migration!</span>
+  <span *ngSwitchCase="''">Empty string</span>
+  <span *ngSwitchDefault>Default/Null/Other</span>
+</div>
+
+<p>Testing DatePipe edge case:</p>
+<p>{{ dateValue | date:'fullDate' }}</p>
+
+<p>Testing PluralPipe edge case:</p>
+<input type="number" [(ngModel)]="count" min="0" max="5">
+<p>{{ count | i18nPlural:pluralMap }}</p>
