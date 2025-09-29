@@ -1,0 +1,5 @@
+<h3>komponent-Å (unicode) external template</h3>
+<ul>
+  <li *ngFor="let x of safeData; let i = index">{{ i }}: {{ x }}</li>
+</ul>
+<p *ngIf="safeData.length === 0">Empty array shown using null-coalescing in template.</p>

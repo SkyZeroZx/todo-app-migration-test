@@ -1,0 +1,6 @@
+<h3>nested--ng--container (external template)</h3>
+<ng-container *ngIf="outer">
+  <ng-container *ngFor="let n of nums">
+    <p>{{ n }} — {{ displayVal }}</p>
+  </ng-container>
+</ng-container>

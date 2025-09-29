@@ -1,0 +1,6 @@
+<h3>123-weird component (external template)</h3>
+<p *ngIf="count; else noItems">We have {{ count }} items.</p>
+<ng-template #noItems>
+  <p>No items — this tests *ngIf with else and null arrays.</p>
+</ng-template>
+<p>Plural mapping: {{ count | i18nPlural: pluralMap }}</p>
