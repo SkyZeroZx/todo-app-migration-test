@@ -1,11 +1,7 @@
-import { Component, NgModule, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule as NgCommomModule } from '@angular/common';
-
-@NgModule({
-  imports: [NgCommomModule],
-})
-export class CommonModule {}
+import { MyModule as CommonModule } from './common/my-module.module';
 
 @Component({
   selector: 'app-root',
