@@ -20,6 +20,9 @@ import { EmptyBodyComponent } from './todo/emptybody.component';
 import { NestedNgContainerComponent } from './todo/nested--ng--container.component';
 import { LegacyListComponent } from './legacy/legacy-list.component';
 import { LegacyIfComponent } from './legacy/legacy-if.component';
+import { UserAllComponent } from './users/user-all.component';
+import { DirectivesPipesDemoComponent } from './todo/directives-pipes-demo.component';
+import { NgPluralDemoComponent } from './todo/ngplural-demo.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'add', pathMatch: 'full' },
@@ -43,4 +46,7 @@ export const routes: Routes = [
   { path: 'nested--ng--container', component: NestedNgContainerComponent },
   { path: 'legacy/list', component: LegacyListComponent },
   { path: 'legacy/if', component: LegacyIfComponent },
+  { path: 'users/all', component: UserAllComponent },
+  { path: 'directives-pipes', component: DirectivesPipesDemoComponent },
+  { path: 'ngplural', component: NgPluralDemoComponent },
 ];
