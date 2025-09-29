@@ -24,6 +24,7 @@ import { UserAllComponent } from './users/user-all.component';
 import { DirectivesPipesDemoComponent } from './todo/directives-pipes-demo.component';
 import { NgPluralDemoComponent } from './todo/ngplural-demo.component';
 import { ComplexNestedComponent } from './todo/complex-nested.component';
+import { LegacyShellComponent } from './legacy-complex/legacy-shell.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'add', pathMatch: 'full' },
@@ -51,4 +52,5 @@ export const routes: Routes = [
   { path: 'directives-pipes', component: DirectivesPipesDemoComponent },
   { path: 'ngplural', component: NgPluralDemoComponent },
   { path: 'complex-nested', component: ComplexNestedComponent },
+  { path: 'legacy-complex', component: LegacyShellComponent },
 ];
