@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import { UsedComponent } from './declarations';
+import { MixedModule } from './mixed.module';
 
 @Component({
   selector: 'my-comp',
   template: '<used-comp></used-comp>',
-  imports: [UsedComponent]
+  imports: [MixedModule],
 })
 export class MyComp {}

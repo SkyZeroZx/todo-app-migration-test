@@ -1,9 +1,9 @@
-import {Component} from '@angular/core';
-
+import { Component } from '@angular/core';
+import { MixedModule } from './mixed.module';
 
 @Component({
   selector: 'my-comp',
   template: '<other></other>',
-  imports: [OtherComponent]
+  imports: [MixedModule],
 })
 export class MyComp {}

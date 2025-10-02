@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
+import { OtherModule } from './other.module';
 
-import { OtherComponent } from './other';
-
+ 
 @Component({
   selector: 'my-comp',
   template: '<other></other>',
-  imports: [OtherComponent]
+  imports: [OtherModule]
 })
 export class MyComp {}
